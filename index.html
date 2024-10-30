@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Başlangıç Sayfası</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .search-container {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .search-container input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-container button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #35424a;
+            color: #ffffff;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        main {
+            text-align: center;
+            margin: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #35424a;
+            color: #ffffff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Start</h1>
+    </header>
+    <div class="search-container">
+        <input type="text" id="searchQuery" placeholder="Arama yapın...">
+        <button id="searchButton">Ara</button>
+    </div>
+    <main>
+        <img src="https://via.placeholder.com/400" alt="Başlangıç Resmi">
+        <p>Bu basit başlangıç sayfası HTML5, CSS3 ve JavaScript kullanılarak oluşturulmuştur.</p>
+        <button id="welcomeButton">Hoş Geldin Mesajını Göster</button>
+        <p id="welcomeMessage" style="display: none;"></p>
+    </main>
+    <script>
+        // Hoş geldin mesajı
+        document.getElementById('welcomeButton').addEventListener('click', function() {
+            document.getElementById('welcomeMessage').innerText = 'Hoş geldiniz! Bu sayfa HTML, CSS ve JavaScript ile yapılmıştır.';
+            document.getElementById('welcomeMessage').style.display = 'block';
+        });
+
+        // Arama butonuna tıklama işlemi
+        document.getElementById('searchButton').addEventListener('click', function() {
+            var query = document.getElementById('searchQuery').value;
+            if (query) {
+                var searchURL = 'https://vuhuv.com/?k=1&p=1&d=1&q=' + encodeURIComponent(query);
+                window.location.href = searchURL; // Arama motoruna yönlendirme
+            } else {
+                alert('Lütfen bir arama terimi girin.');
+            }
+        });
+    </script>
+</body>
+</html>
