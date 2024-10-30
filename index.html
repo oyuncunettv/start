@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Başlangıç Sayfası</title>
     <style>
+        aside {
+            float: left;
+            widht: 150px;
+            min-height: 280px;
+            border-color: black;
+            background-color: gray;
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -77,6 +84,9 @@
         <button id="welcomeButton">Hoş Geldin Mesajını Göster</button>
         <p id="welcomeMessage" style="display: none;"></p>
     </main>
+    <aside>
+        <li><a href="https://peertube.tv/">PeerTube</a></li>
+    </aside>
     <script>
         // Hoş geldin mesajı
         document.getElementById('welcomeButton').addEventListener('click', function() {
